@@ -1,0 +1,347 @@
+<!doctype html>
+<html>
+
+<head>
+    <title>hotel</title>
+    <meta name="author" content="Purvansh" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <link rel="stylesheet" href="css/mainstyle.css">
+    <link href="https://fonts.googleapis.com/css?family=Satisfy&display=swap&effect=3d" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Tangerine&display=swap&effect=fire-animation|3d-float"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" type="text/css" href="css/anim_back.css" />
+    <link rel="stylesheet" type="text/css" href="css/responsive.css" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="css/jquery-sakura.css" rel="stylesheet" type="text/css">
+    <!-- <script type="text/javascript" src="js/modernizr.custom.86080.js"></script> -->
+    <script>
+        window.onload = function () {
+            window.scrollTo(0, 0);
+        }
+    </script>
+
+</head>
+
+<body>
+    <div class="se-pre-con"></div>
+    <div class="wrapper">
+        <ul class="cb-slideshow">
+            <li><img src="images/1.jpg"></li>
+            <li><img src="images/2.jpg"></li>
+            <li><img src="images/3.jpg"></li>
+            <li><img src="images/4.jpg"></li>
+        </ul>
+        <div class="navbar" id="navBar">
+            <nav>
+                <a href="../login.html" target="_blank"><img src="images/logo.png"></a>
+                <div class="menubar">
+                    <ul>
+                        <li class="active"><a href="mainpage.html">Home</a></li>
+                        <li><a>Gallery
+                                <ul class="ulist">
+                                    <li><a>Rooms</a></li>
+                                    <li><a href="playimg.html" target="_blank">Garden</a></li>
+                                    <li><a href="restraimg.html" target="_blank">Restaurant</a></li>
+                                </ul>
+                            </a></li>
+                        <li onclick="on()"><a>About Us</a></li>
+                        <li><a>Pricing
+                                <ul class="ulist">
+                                    <li><a href="#cardcontainer">Rooms</a></li>
+                                    <li onclick="onprice()"><a>Restaurant</a></li>
+                                </ul>
+                            </a></li>
+                        <li><a>Contact
+                                <ul class="ulist">
+                                    <li class="contacticon"><a href="https://www.facebook.com/" target="_blank"><i
+                                                class="fa fa-facebook"></i></a></li>
+                                    <li class="contacticon"><a href="https://www.instagram.com" target="_blank"><i
+                                                class="fa fa-instagram"></i></a></li>
+                                    <li class="contacticon"><a href="#contact"><i class="fa fa-whatsapp"></i></a></li>
+                                </ul>
+                            </a></li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+        <h2 class="luxurystay">A Luxury Stay</h2>
+        <table class="forms" style="border-collapse: separate; border-spacing: 12px">
+            <tr>
+                <td><i class="fa fa-calendar"><span style="font-size:18px ;margin-left: 10px;">Check-in</span><input
+                            type="date" class="checkIn" id="dateinput" required /></i>
+                </td>
+                <td><i class="fa fa-calendar"><span style="font-size:18px;margin-left: 10px;">Check-Out</span><input
+                            type="date" class="checkOut" id="dateoutinput" required /></i>
+                </td>
+                <td>
+                    <i class="fa fa-male"><span style="font-size:18px ;margin-left: 10px;">Adult</span>
+                        <input type="number" class="adult" value="1" min="1" max="4" id="adultinput" />
+
+                    </i>
+                </td>
+                <td>
+                    <i class="fa fa-child"><span style="font-size:18px ;margin-left: 10px;">Child</span>
+                        <input type="number" class="child" value="0" min="0" max="4" id="childinput" />
+                    </i>
+                </td>
+                <td>
+                    <input type="submit" value="Check Availability" onclick="validate()">
+                </td>
+            </tr>
+        </table>
+        <script>
+            function validate() {
+                var d = document.getElementById('dateinput').value;
+                var din = Date.parse(d);
+                d = document.getElementById('dateoutinput').value;
+                var dout = Date.parse(d);
+                var dcurr = new Date();
+                dcurr = Date.parse(dcurr);
+                if (dcurr > din) {
+                    alert('Invalid Check In Date')
+                }
+                if (dcurr > dout) {
+                    alert('Invalid Check Out Date')
+                }
+                if (din > dout) {
+                    alert('Invalid Dates')
+                }
+                d = document.getElementById('adultinput').value;
+                if (d < 1 || d > 4) {
+                    alert("Invalid adult count")
+                }
+                d = document.getElementById('childinput').value;
+                if (d < 0 || d > 4) {
+                    alert("Invalid child count")
+                }
+            }
+        </script>
+        <div class="formbox"></div>
+        <div id="aboutusoverlay" class="overlayclass">
+            <i class="fa fa-times fa-3x" id="closeoverlay" onclick="off()"></i>
+            <h3><a>Hotel Grand Palazzo</a></h3>
+            <p class="font-effect-3d-float">Established in 2005 with aim of providing world
+                class facilities to customer
+                and bringing tasty food from all across India at single place.
+                We aim to offer you comfortable surroundings, great food and excellent service to make your stay truly
+                enjoyable.
+
+                Please take a look through our web site where you will find most of the information you need. Call us to
+                discuss your
+                hotel reservation, dining plans or function requirements.
+
+                <br> We look forward to welcoming you soon.
+            </p>
+        </div>
+        <div id="restraprice" class="restraprice">
+            <i class="fa fa-times fa-3x" id="closeprice" onclick="offprice()"></i>
+            <div class="priceimg">
+                <div class="numbertext">1 / 3</div>
+                <img src="images/juicedup(1).png" style="width:100%">
+            </div>
+
+            <div class="priceimg">
+                <div class="numbertext">2 / 3</div>
+                <img src="images/juicedup.png" style="width:100%">
+            </div>
+
+            <div class="priceimg">
+                <div class="numbertext">3 / 3</div>
+                <img src="images/juicedup(2).png" style="width:100%">>
+            </div>
+
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        </div>
+    </div>
+    <div class="rooms" id="cardcontainer">
+        <div class="card-container">
+            <div class="card" id="c1">
+                <img src="images/bedcard.jpg" alt="Denim Jeans" style="width:100%">
+                <h1>Deluxe Rooms</h1>
+                <p class="price">Rs. 4000</p>
+                <a href="booknow.html" target="_blank">
+                    <p><button>Book Now</button></p>
+                </a>
+            </div>
+            <div class=" card" id="c2">
+                <img src="images/doublebedcard.jpg" alt="Denim Jeans" style="width:100%">
+                <h1>Double Bed</h1>
+                <p class="price">Rs. 2000</p>
+                <a href="booknow.html" target="_blank">
+                    <p><button>Book Now</button></p>
+                </a>
+            </div>
+            <div class="card" id="c3">
+                <img src="images/singlecard.jpg" alt="Denim Jeans" style="width:100%">
+                <h1>Single Bed</h1>
+                <p class="price">Rs. 1500</p>
+                <a href="booknow.html" target="_blank">
+                    <p><button>Book Now</button></p>
+                </a>
+            </div>
+        </div>
+        <div class="gotop" title="scroll to top" id="mybtn" onclick="topFunction()">
+            <i class="fa fa-chevron-up fa-2x"></i>
+        </div>
+        <img src="images/wave.png" class="wavy">
+    </div>
+    <div class="feature">
+        <div class="restrafeat">
+            <img src="images/rest.png" alt="" id="f1">
+            <p>Best Quality food available at unbelieveable prices</p>
+        </div>
+        <div class="roomfeat" id="f2">
+            <img src="images/room.png">
+            <p>Make your stay comfortable at our best quality rooms available in different variants</p>
+        </div>
+        <div class="playfeat" id="f3">
+            <img src="images/play.png">
+            <p>Let your children spend fun time at our playground and garden</p>
+        </div>
+    </div>
+    <div class="end">
+        <span class="s1"></span>
+        <span class="s2"></span>
+        <div class="logoend">
+            <img src="images/logo.png">
+        </div>
+        <div class="address">
+            <p>73,Udbhav Nagar<br>Rajgarh (biaora)<br>465661 M.P.</p>
+        </div>
+        <div class="contact" id="contact">
+            <p><i class="fa fa-phone"></i>&nbsp;&nbsp; 8871700250<br><i class="fa fa-envelope">&nbsp;&nbsp;</i><a
+                    href="mailto:purvanshgaur26@gmail.com">
+                    purvanshgaur26@gmail.com</a></p>
+        </div>
+        <div class="font-effect-fire-animation">
+            <p>Copyright &copy; 2019 .All rights Reserved.</p>
+        </div>
+    </div>
+    <div class="audio">
+        <!-- <embed src="Emotional-piano-song.mp3" autostart="true"> -->
+    </div>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script src="js/jquery-sakura.min.js"></script>
+    <script>
+        $(window).load(function () {
+            $('body').sakura({
+                fallspeed: 2,
+                newOn: 200
+            });
+        });
+    </script>
+</body>
+
+
+<!-- 
+<script>
+    var prevScrollpos = window.pageYOffset;
+    window.onscroll = function () {
+        var currentScrollPos = window.pageYOffset;
+        if (prevScrollpos < currentScrollPos) {
+            document.getElementById("navBar").style.background = "rgb(0, 0, 0, 0.5)";
+            document.getElementsByClassName(ulist).background = "black";
+        } else {
+            document.getElementById("navBar").style.background = "none";
+        }
+        prevScrollpos = currentScrollPos;
+    } 
+</script>-->
+<script>
+    // When the user scrolls down 20px from the top of the document, show the button
+    window.onscroll = function () { scrollFunction() };
+
+    function scrollFunction() {
+        if (document.body.scrollTop > 130 || document.documentElement.scrollTop > 130) {
+            document.getElementById("mybtn").style.display = "block";
+        } else {
+            document.getElementById("mybtn").style.display = "none";
+        }
+        if (document.body.scrollTop > 400 || document.documentElement.scrollTop > 400) {
+            document.getElementById("navBar").style.background = "rgb(0, 0, 0, 0.7)";
+            var b = document.getElementsByClassName('ulist');
+            var i;
+            for (i = 0; i < b.length; i++) {
+                var c = b[i].children;
+                var j;
+                for (j = 0; j < c.length; j++) {
+                    c[j].style.background = "rgb(0, 0, 0, 0.4)";
+                }
+            }
+        } else {
+            document.getElementById("navBar").style.background = "none";
+            var b = document.getElementsByClassName('ulist');
+            var i;
+            for (i = 0; i < b.length; i++) {
+                var c = b[i].children;
+                var j;
+                for (j = 0; j < c.length; j++) {
+                    c[j].style.background = "transparent";
+                }
+            }
+        }
+    }
+    // When the user clicks on the button, scroll to the top of the document
+    function topFunction() {
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
+    }
+    function on() {
+
+        document.getElementById("aboutusoverlay").style.display = "block";
+        document.getElementById("aboutusoverlay").style.animationName = "dropfromtop";
+
+        document.getElementById("aboutusoverlay").style.animationDuration = "1.3s";
+    }
+
+    function off() {
+        document.getElementById("aboutusoverlay").style.display = "none";
+    }
+    var slideIndex = 1;
+    showSlides(slideIndex);
+
+    function plusSlides(n) {
+        showSlides(slideIndex += n);
+    }
+
+    function currentSlide(n) {
+        showSlides(slideIndex = n);
+    }
+
+    function showSlides(n) {
+        var i;
+        var slides = document.getElementsByClassName("priceimg");
+        if (n > slides.length) { slideIndex = 1 }
+        if (n < 1) { slideIndex = slides.length }
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+        slides[slideIndex - 1].style.display = "block";
+    }
+    function onprice() {
+
+        document.getElementById("restraprice").style.display = "block";
+        document.getElementById("restraprice").style.animationName = "dropfromtop";
+
+        document.getElementById("restraprice").style.animationDuration = "1.3s";
+        //
+    }
+    function offprice() {
+
+        document.getElementById("restraprice").style.display = "none";
+    }
+    var today = new Date();
+    document.getElementById('dateinput').valueAsDate = today;
+    var tomorrow = new Date();
+    tomorrow.setDate(today.getDate() + 1);
+    document.getElementById('dateoutinput').valueAsDate = tomorrow;
+
+    $(window).load(function () {
+        // Animate loader off screen
+        $(".se-pre-con").fadeOut("slow");;
+    });
+</script>
+
+</html>

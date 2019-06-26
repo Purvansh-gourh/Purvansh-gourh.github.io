@@ -1,0 +1,79 @@
+<!doctype html>
+<html>
+
+<head>
+    <title>Book Now</title>
+    <link rel="stylesheet" href="css/booknow.css">
+</head>
+
+<body>
+    <div class="form">
+        <div class="name">
+            <p>Full Name</p>
+            <input type="text" name="fullName" required>
+        </div>
+        <div class="block2">
+            <div class="dob">
+                <p>Date Of Birth</p>
+                <input type="date" name="dob" value="01/01/2000" required>
+            </div>
+            <div class="phone">
+                <p>Phone No.</p>
+                <input type="tel" name="phone" placeholder="+91__________">
+            </div>
+        </div>
+        <div class="check">
+            <div class="checkin">
+                <p>Check in</p>
+                <input type="date" required>
+            </div>
+            <div class="checkout">
+                <p>Check out</p>
+                <input type="date" required>
+            </div>
+        </div>
+        <div class="address">
+            <p>Address</p>
+            <input type="text" name="address" placeholder="Street/Landmark/town/city/State" required>
+        </div>
+        <div class="numb">
+            <div class="ad">
+                <p>Adult</p>
+                <input type="number" name="adult" value="1" min="1" required>
+
+            </div>
+            <div class="ch">
+                <p>Child</p>
+                <input type="number" name="child" value="0" min="0">
+            </div>
+        </div>
+        <div class="roomdetail">
+            <div class="suittype">
+                <p>Room type</p>
+                <select name="room">
+                    <option name="ac" value="AC" selected>AC</option>
+                    <option name="deluxe" value="Deluxe">Deluxe</option>
+                    <option name="non-ac" value="Non-AC">Non-AC</option>
+                </select>
+            </div>
+            <div class="bedtype">
+                <p>Bedding type</p>
+                <select name="bed">
+                    <option name="singlebed" value="Single Bed" selected>Single-Bed</option>
+                    <option name="doublebed" value="Double Bed">Double-Bed</option>
+                </select>
+            </div>
+        </div>
+        <div class="but">
+            <div class="sub">
+                <input type="submit" value="Book Now" name="">
+            </div>
+            <div class="res">
+                <input type="reset" value="Reset" name="">
+            </div>
+        </div>
+        </form>
+    </div>
+</body>
+
+</html>
