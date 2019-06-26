@@ -1,0 +1,94 @@
+body{
+    background-image: url(../images/bookform.jpg)  ;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.form{
+    position: relative;
+    left: 30%;
+    background:rgb(0,0,0,0.3);
+    max-width:40%;
+    padding: 30px;
+}
+input,select{
+    padding: 5px;
+    background: transparent;
+    outline: none;
+    border: 2px solid rgb(255,255,255,0.3);
+    border-bottom: 1px solid black;
+}
+.name input{
+    width:83%;
+}
+.check{
+    width: 100%;
+}
+.checkin,.checkout{
+    display: inline-block;
+    max-width: 300px;
+    width: 40%;
+}
+.address input{
+    width: 83%;
+}
+.numb{
+    width: 100%;
+}
+.ad,.ch{
+    display: inline-block;
+    width: 40%;
+    max-width: 300px;
+}
+.roomdetail{
+    width: 100%;
+}
+.suittype,.bedtype{
+    display: inline-block;
+    width: 40%;
+    max-width: 300px;
+}
+.block2{
+    width: 100%;
+}
+.dob,.phone{
+    display: inline-block;
+    width: 40%;
+    max-width: 300px;
+}
+.block2 input,.check input,.numb input{
+    
+    width: 85%;
+    max-width: 300px;
+}
+.roomdetail select{
+    width: 90%;
+    max-width: 300px;;
+}
+input:hover,select:hover{
+    opacity: 0.5;
+    background: lightgray;
+}
+input[type=date]::-webkit-inner-spin-button, 
+
+input[type=date]::-webkit-outer-spin-button { 
+
+  -webkit-appearance: none; 
+
+  margin: 0; 
+
+}
+.but{
+    display: inline;
+}
+.but sub input,.but res input{
+    width: 50px;
+    height: 40px;
+}
+.but sub{
+    position: absolute;
+    left: 10%;
+}
+.but res{
+    position: absolute;
+    right: 10%;
+}

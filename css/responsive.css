@@ -1,0 +1,31 @@
+@media (max-width:1000px){
+    *{
+        font-size: 15px;
+    }
+	.wrapper{
+        height: 500px;
+    }
+    .navbar{
+        height: 60px;
+    }
+    .navbar img{
+        position: relative;
+        left: 7%;
+        top: 10%;
+        width: 60px;
+        height: 33px;
+    }
+    .menubar{
+        transform: translate(350px,-40px);
+    }
+    .menubar ul li{
+        width: 100px;
+        height: 40px;
+        line-height: 40px;
+    }
+    .checkIn,.checkOut,.adult,.child{
+        width: 60px;
+        height: 20px;
+        font-size: 10px;
+    }
+}
