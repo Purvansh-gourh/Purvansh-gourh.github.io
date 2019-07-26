@@ -25,7 +25,7 @@ body{
 	z-index: 10;
 	color:black;
 	box-sizing: border-box;
-	font-family: 'Satisfy',cursive;
+	font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 	display: inline;
 }
 .navbar img{
@@ -186,8 +186,8 @@ nav{
   width: 300px;
   position: absolute;
   text-align: center;
-  font-family: Comic Sans MS;
-  background: black;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+	background: black;
   color: white;
   height: 560px;
 }
@@ -197,8 +197,8 @@ nav{
 }
 .card h1{
 	
-  font-family: Comic Sans MS;
-	padding: 5px;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+		padding: 5px;
 	height: 60px;
 }
 .price{
@@ -451,6 +451,7 @@ input[type=date]::-webkit-outer-spin-button {
 	left: 50%;
 	top:70%;
 	transform: translate(-50%,-50%);
+	font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 	color: white;
 
 }
