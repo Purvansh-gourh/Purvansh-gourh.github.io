@@ -353,15 +353,10 @@
             <img src="images/logo.png">
         </div>
         <div class="address">
-            <p>Malaviya Nagar ,<br>Jaipur (Raj.) ,<br>302017</p>
         </div>
         <div class="contact" id="contact" name="contact">
-            <p><i class="fa fa-phone"></i>&nbsp;&nbsp; 8871700250<br><i class="fa fa-envelope">&nbsp;&nbsp;</i><a
-                    href="mailto:purvanshgaur26@gmail.com">
-                    purvanshgaur26@gmail.com</a></p>
         </div>
         <div class="font-effect-fire-animation">
-            <p>Copyright &copy; 2019 .All rights Reserved.</p>
         </div>
     </div>
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
