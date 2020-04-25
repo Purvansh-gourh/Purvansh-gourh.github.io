@@ -1,0 +1,135 @@
+#loginbox{
+  position: fixed; /* Sit on top of the page content */
+  display: none; /* Hidden by default */
+    background:white;
+    opacity: 0.9;
+    color:darkblue;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-sizing: border-box;
+    padding: 30px 30px;
+    z-index: 99999; 
+    border-radius: 13px;
+}
+
+#loginbox p {
+    margin: 0;
+    padding: 0;
+    font-weight: bold;
+}
+
+#loginbox input {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+#loginbox input[type="text"],
+input[type="password"] {
+    border: none;
+    border-bottom: 1px solid black;
+    background: transparent;
+    outline: none;
+    height: 40px;
+    color:darkblue;
+    font-size: 16px;
+}
+
+#loginbox input[type="submit"] {
+    border: none;
+    height: 40px;
+    outline: none;
+    background: #00a9ff;
+    color:black;
+    font-size: 18px;
+    border-radius: 20px;
+}
+
+#loginbox input[type="submit"]:hover {
+    cursor: pointer;
+    background: yellow;
+    color: black;
+}
+
+#loginbox a {
+    text-decoration: none;
+    font-size: 12px;
+    line-height: 20px;
+    color: darkblue;
+}
+
+#loginbox a:hover {
+    color: red;
+}
+#loginboxcover{
+	position: fixed;
+	display: none;
+	width: 100%;
+	height: 100%;
+	background:white;
+	opacity: 0.7;
+	z-index:9999;
+}
+#closeloginform{
+	color: black;
+	position: relative;
+	left: 95%;
+	top: 0%;
+}
+#closeloginform:hover{
+    transition: transform 0.5s;
+	transform: scale(1.3);
+	color: mediumaquamarine;
+}
+#createaccount{
+    position: fixed;
+    display: none;
+    background: white;
+    opacity: 0.9;
+    border-radius: 15px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    color: darkblue;
+    width: 500px;
+    height: 600px;
+    z-index: 99999;
+}
+#closecreateaccount{
+	color: black;
+	position: relative;
+	left:92%;
+    /* top: 20%; */
+    top: 10px;
+}
+#closecreateaccount:hover{
+    transition: transform 0.5s;
+    transform: scale(1.3);
+    color: mediumaquamarine;
+}
+#createaccount form{
+    padding: 25px;
+}
+#createaccount input {
+    width: 100%;
+    margin-bottom: 10px;
+}
+#createaccount form input[type="text"],
+input[type="password"],input[type="email"],input[type="tel"] {
+    border: none;
+    border-bottom: 1px solid black;
+    background: transparent;
+    outline: none;
+    height: 30px;
+    color:darkblue;
+    font-size: 16px;
+}
+#createaccount input[type="submit"] {
+    border: none;
+    height: 40px;
+    outline: none;
+    background: #00a9ff;
+    color:black;
+    font-size: 18px;
+    border-radius: 20px;
+}

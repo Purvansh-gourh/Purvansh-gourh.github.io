@@ -1,0 +1,381 @@
+body{
+	font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background:url(../images/beige-tiles.png);
+}
+
+.wrapper{
+	/* overflow: hidden; */
+}
+.navbar{
+	position: fixed;
+	width: 100%;
+    height: 120px;
+    left: 0;
+    top: 0;
+	z-index: 10;
+	color:black;
+	box-sizing: border-box;
+	font-family: 'Satisfy',cursive;
+    display: inline;
+    background: rgb(0, 0, 0,0.7);
+}
+.navbar img{
+	border-radius: 5px;
+	margin-left: 5%;
+	width: 150px;
+	height: 80px;
+	transition: transform 0.5s;
+}
+.navbar img:hover{
+	transform: scale(1.15) translateX(20px);
+	opacity: 0.7; 
+}
+nav{
+	padding: 20px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.menubar{
+    position: relative;
+	/* background: #fff; */
+	padding-bottom: 35px;
+	padding-left: 15px;
+	font-size:20px;
+	height: 60px;
+	/* transform: translate(400px,-85px);  */
+	font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif !important;
+}
+.avatar{
+    border: none !important;
+    background: none !important;
+	width: 100px !important;
+	animation: none !important;
+	transition: none !important;
+	padding: none !important;
+	
+}
+.avatar img{
+	height: 60px;
+	width: 80px;
+	border-radius: 50%;
+	transform: none !important;
+	/* padding: none; */
+}
+.menubar ul{
+	padding: 0px;
+	list-style: none;
+}
+.menubar ul li{
+	float:left;
+	width:180px;
+	height:60px;
+	line-height: 60px;
+	text-align: center;
+	border:rgb(143, 142, 142,0.8) 2px solid;
+	margin-right: 5px;
+	cursor: pointer;
+    color: white;
+    background: rgb(0, 0, 0,0.2);
+}
+.menubar ul li a{
+	text-decoration: none;
+	display: block;
+	color: white !important;
+}
+.menubar a:visited {
+	color: white;
+}
+.menubar a:active{
+	color:crimson !important ;
+}
+.menubar ul li ul li{
+	border: none !important;
+	display:none;
+}
+.menubar ul li ul li a{
+	transition:transform 0.8s;
+	color: white;
+}
+.menubar ul li ul li:hover a{
+	transform: translateX(-40px);
+	color: yellow; 
+}
+
+.menubar ul li:hover ul li{
+	display: block;
+}
+.menubar ul li:hover{
+	animation-name: menu;
+	animation-duration: 0.7s;
+	animation-iteration-count: infinite;
+	color: yellow;	
+	animation-timing-function: linear;
+}
+.active{
+	border-bottom:2px solid crimson !important;
+}
+.menubar ul li ul li:hover{
+	border-bottom:2px solid crimson !important;
+	animation: none;
+	transition: 0.5s;
+	transition-timing-function: ease-out;
+}
+.menubar .fa{
+	color:white;
+	transition: transform 1.5s ;
+}
+.menubar .contacticon:hover .fa{
+	color:yellow;
+	transform: translateX(60px)  scale(1.5);
+}
+@keyframes menu{
+	0%{
+		border-left: 2px solid crimson;
+	}
+	33%{
+		
+		border-top: 2px solid crimson;
+	}
+	66%{
+		border-right:2px solid crimson;
+	}
+	100%{
+		border-bottom:2px solid crimson;
+	}
+}
+#aboutusoverlay{
+  position: fixed; /* Sit on top of the page content */
+  display: none; /* Hidden by default */
+  width: 90%; /* Full width (cover the whole page) */
+  height: 80%; /* Full height (cover the whole page) */
+  top: 2%; 
+  left: 2%;
+  color: black;
+  text-align: center;
+  background:rgba(255, 255, 255, 0.8);
+  z-index: 99999; 
+  padding: 50px;
+}
+#closeoverlay{
+	  cursor: pointer; /* Add a pointer on hover */
+	position: absolute;
+	right: 2%;
+	top: 2%;
+}
+.overlayclass .fa:hover{
+	transform: scale(1.4);
+	color: cadetblue;
+	transition: all 0.5s;
+	
+}
+.overlayclass h3{
+	font-size: 60px;
+	font-family: "edo";
+	text-decoration: none;
+}
+@font-face{
+	font-family: "edo";
+	src: url(edo.ttf);
+}
+@font-face{
+	font-family: "Satisfy";
+	src: url(Satisfy-Regular.ttf);
+}
+@font-face{
+	font-family: "Tangerine";
+	src: url(Tangerine-Regular.ttf);
+}
+.overlayclass p{
+	font-family: 'Tangerine',cursive !important;
+	color:black;
+	font-size: 45px !important;
+	padding: 50px;
+	transition: transform 0.5s;
+}
+.overlayclass p:hover{
+	transform: scale(1.1);
+	color:rgb(0, 0, 255);
+}
+.overlayclass h3:before {
+  content: "";
+  position: absolute;
+  right: 25%;
+  top: 25%;
+  width: 50%;
+  height: 3px;
+
+  background-color: #000;
+  visibility: hidden;
+  -webkit-transform: scaleX(0);
+  transform: scaleX(0);
+  -webkit-transition: all 0.3s ease-in-out 0s;
+  transition: all 0.3s ease-in-out 0s;
+}
+.overlayclass h3:hover:before {
+  visibility: visible;
+  -webkit-transform: scaleX(1);
+  transform: scaleX(1);
+}
+.overlayclass h3:hover {
+  color: darkblue;
+}
+@keyframes dropfromtop{
+	from{
+		opacity: 0.7;
+		top: 0;
+		transform: scale(0.5);
+	}
+}
+.restraprice{
+	margin: auto;
+	position: fixed; /* Sit on top of the page content */
+  display: none; /* Hidden by default */
+  width: 75%; /* Full width (cover the whole page) */
+  height: 80%; /* Full height (cover the whole page) */
+  top: 3%; 
+  left: 10%;
+  color: black;
+  text-align: center;
+  background:rgba(255, 255, 255, 0.8);
+  z-index: 99999; 
+  padding: 50px;
+  cursor: default;
+}
+.priceimg img{
+	position:absolute;
+	top: 0;
+	left: 0;
+	height: 100%;
+	left:23%;
+	width: 650px !important;
+}
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: 60px;
+  padding: 16px;
+  margin-top: -22px;
+  color: black;
+  font-weight: bold;
+  font-size: 30px;
+  transition: 0.6s ease;
+  border-radius: 0 5px 5px 0;
+  user-select: none;
+}
+.next {
+  right: 0;
+  border-radius: 5px 0 0 5px;
+}
+.prev{
+	left: 0;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+  font-size: 35px;
+  color: white;
+}
+.numbertext {
+  color: crimson;
+  font-size: 20px;
+  padding: 10px 30px;
+  position: absolute;
+  z-index: 999999;
+  top: 0;
+}
+#closeprice{
+	  cursor: pointer; /* Add a pointer on hover */
+	position: absolute;
+	right: 2%;
+	top: 2%;
+}
+#closeprice:hover{
+	animation: rotateprice 1s infinite;
+}
+@keyframes rotateprice{
+	0%{
+		transform: rotate(30deg);
+	}
+	20%{
+		transform: rotate(60deg);
+	}
+	40%{
+		transform: rotate(90deg);
+	}
+	60%{
+		transform: rotate(120deg);
+	}
+	80%{
+		transform: rotate(150deg);
+	}
+	100%{
+		transform: rotate(180deg);
+	}
+}
+.priceimg img{
+	animation: imagetr 0.7s 1 ease-in-out;
+} 
+@keyframes imagetr{
+	from{
+		transform: scale(0.5) rotateY(-180deg);
+	}
+	50%{
+		transform:scale(0.8) rotateY(-90deg);
+	}
+	to{
+		transform:scale(1);
+	}
+}
+.sidenav{
+    position: fixed;
+    width: 18%;
+    top: 16%;
+    left: 0;
+    height: 90%;
+    background: rgba(255, 181, 43, 0.5);
+    color: white;
+}
+.sidenav ul{
+    padding: 40px;
+    list-style: none;
+}
+.sidenav ul li{
+    width: 180px;
+    height: 60px;
+    text-align: center !important;
+    border:rgba(92, 68, 3, 0.8) 2px solid;
+    margin-bottom: 15px;
+    margin-top: 15px;
+    background: rgba(163, 122, 10, 0.6);
+    cursor: pointer;
+    color: white;
+    font-size: 20px;
+}
+.sidenav ul li a{
+    text-decoration: none;
+    padding: 15px;
+	display: block;
+}
+.sidenav a:visited {
+	color: white;
+}
+.sidenav a:active{
+	color:crimson !important ;
+}
+.sidenav ul li:hover{
+    background: rgba(255, 181, 43, 0.5);
+}
+#restrapricecover{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: white;
+    opacity: 0.7;
+    display: none;
+    z-index: 99;
+    top: 0;
+    left: 0;
+}

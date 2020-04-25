@@ -3,70 +3,70 @@ body{
     background-size: cover;
     background-repeat: no-repeat;
 }
-.form{
-    position: relative;
-    left: 30%;
-    background:rgb(0,0,0,0.3);
-    max-width:40%;
+.formbook{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    background:rgb(0,0,0,0.5);
     padding: 30px;
+    height: 70%;
+    width: 31%;  
+    color: white;    
 }
-input,select{
-    padding: 5px;
+.formbook form{
+    padding: 20px;
+
+}
+.formbook input{
+    width: 100%;
+    margin-bottom: 10px;
+    color: white; 
+}
+.formbook form input[type="text"],select,
+input[type="date"],input[type="number"],input[type="tel"] {
+    border: none;
+    border-bottom: 1px solid white;
     background: transparent;
     outline: none;
-    border: 2px solid rgb(255,255,255,0.3);
-    border-bottom: 1px solid black;
+    height: 30px;
+    color:white;
+    font-size: 16px;
 }
-.name input{
-    width:83%;
+.formbook input[type="date"],input[type="number"],input[type="tel"],select{
+    width: 48%;
 }
-.check{
-    width: 100%;
+input[type="tel"]{
+    margin-left: 8px;
+    width: 49%;
+
 }
-.checkin,.checkout{
-    display: inline-block;
-    max-width: 300px;
+.formbook input[type="submit"] {
+    border: none;
+    margin-left: 10%;
+    height: 40px;
+    outline: none;
+    background: #00a9ff;
+    color:black;
+    font-size: 18px;
+    border-radius: 20px 0px 0px 20px;
     width: 40%;
 }
-.address input{
-    width: 83%;
-}
-.numb{
-    width: 100%;
-}
-.ad,.ch{
-    display: inline-block;
+.formbook input[type="reset"] {
+    border: none;
+    height: 40px;
+    outline: none;
+    background: #00a9ff;
+    color:black;
     width: 40%;
-    max-width: 300px;
+    font-size: 18px;
+    border-radius: 0px 20px 20px 0px;
 }
-.roomdetail{
-    width: 100%;
+.formbook select option{
+    background: transparent;
 }
-.suittype,.bedtype{
-    display: inline-block;
-    width: 40%;
-    max-width: 300px;
-}
-.block2{
-    width: 100%;
-}
-.dob,.phone{
-    display: inline-block;
-    width: 40%;
-    max-width: 300px;
-}
-.block2 input,.check input,.numb input{
-    
-    width: 85%;
-    max-width: 300px;
-}
-.roomdetail select{
-    width: 90%;
-    max-width: 300px;;
-}
-input:hover,select:hover{
-    opacity: 0.5;
-    background: lightgray;
+.formbook input::placeholder{
+    color: rgba(229, 252, 97, 0.6);
 }
 input[type=date]::-webkit-inner-spin-button, 
 
@@ -76,19 +76,4 @@ input[type=date]::-webkit-outer-spin-button {
 
   margin: 0; 
 
-}
-.but{
-    display: inline;
-}
-.but sub input,.but res input{
-    width: 50px;
-    height: 40px;
-}
-.but sub{
-    position: absolute;
-    left: 10%;
-}
-.but res{
-    position: absolute;
-    right: 10%;
 }
