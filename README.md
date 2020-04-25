@@ -1,4 +1,4 @@
 # hotel-website
-this is a sample website for any hotel.
-it contains various images which can be modified as per requirement.
-this is only front end section and it is non-responsive .
+complete front and back end section of a hotel website.
+Build using php ,html, css, js etc.
+Some functionalities may not work on github hosting due to backend utilities.
